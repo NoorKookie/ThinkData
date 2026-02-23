@@ -14,9 +14,9 @@ st.set_page_config(
 
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
-from interpreters.massandspec import interpret_mass_spectrometry_data
-from interpreters.spectrometer import interpret_spectrometer_data
-from interpreters.microscopecounters import interpret_microscope_counts_data
+from massandspec import interpret_mass_spectrometry_data
+from spectrometer import interpret_spectrometer_data
+from microscopecounters import interpret_microscope_counts_data
 
 st.title("ThinkData")
 tool = st.selectbox(
