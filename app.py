@@ -20,8 +20,8 @@ from microscopecounters import interpret_microscope_counts_data
 
 st.title("ThinkData")
 tool = st.selectbox(
-    "What tool produced your data?",
-    [" ", "Spectrometer", "Mass Spectrometry", "Microscope Counts"]
+    "What tool produced your data or What data type do you have?",
+    [" ", "Spectrometer", "Mass Spectrometer", "Microscope Counts"]
 )
 
 # Keep a dataframe in session so it doesn't disappear on reruns
@@ -60,7 +60,7 @@ else:
 if use_sample:
     if tool == "Spectrometer":
         sample_path = "sample-data/spectrometer_sample.csv"
-    elif tool == "Mass Spectrometry":
+    elif tool == "Mass Spectrometer":
         sample_path = "sample-data/mass_spec_sample.csv"
     else:
         sample_path = "sample-data/microscope_counts_sample.csv"
@@ -107,7 +107,7 @@ if clicked and tool == "Spectrometer":
 
         except Exception as e:
             st.error(f"Error interpreting data: {str(e)}")
-if clicked and tool == "Mass Spectrometry":
+if clicked and tool == "Mass Spectrometer":
     if st.session_state.df is None:
         st.warning("Mass Spectrometry interpretation is not implemented yet. Please check back soon!")
     else:
