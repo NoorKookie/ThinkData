@@ -59,11 +59,11 @@ else:
 
 if use_sample:
     if tool == "Spectrometer":
-        sample_path = "sample-data/spectrometer_sample.csv"
+        sample_path = "spectrometer_sample.csv"
     elif tool == "Mass Spectrometer":
-        sample_path = "sample-data/mass_spec_sample.csv"
+        sample_path = "mass_spec_sample.csv"
     else:
-        sample_path = "sample-data/microscope_counts_sample.csv"
+        sample_path = "microscope_counts_sample.csv"
 
     st.session_state.df = pd.read_csv(sample_path)
 
